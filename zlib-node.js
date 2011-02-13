@@ -2419,9 +2419,7 @@ var zip_inflate = function(str) {
     return aout.join("");
 }
 
-RawDeflate = {};
-RawDeflate.deflate = zip_deflate;
-RawDeflate.inflate = zip_inflate;
-
-
-return RawDeflate;
+module.exports = {
+	deflate: zip_deflate,
+	inflate: zip_inflate
+};
